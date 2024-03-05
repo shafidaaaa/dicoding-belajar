@@ -13,7 +13,7 @@ Original file is located at
 """
 import pandas as pd
 import matplotlib.pyplot as plt
-!pip install matplotlib
+
 import seaborn as sns
 import numpy as np
 import scipy.stats as stats
