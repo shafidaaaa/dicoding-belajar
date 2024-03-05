@@ -358,7 +358,7 @@ def calculatePollutantYearly(chooseData, pollutant, year):
 
     return sumYearly, averageYearly,aqi, aqiCategory(aqi)
 
-st.markdown("<h1 style='text-align: center;'>Air Quality District of China</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Air Quality District of Beijing</h1>", unsafe_allow_html=True)
 st.write("<h4 style='text-align: center;'>Preliminary Risk Screen Assessments (PRSAs)</h4>", unsafe_allow_html=True)
 st.write("<h4 style='text-align: center;'>2013 - 2017</h4><br /><br /><br /><hr />", unsafe_allow_html=True)
 
