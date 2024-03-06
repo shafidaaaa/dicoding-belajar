@@ -454,10 +454,11 @@ y_axis = group_byyear.values
 keysyear = group_byyear.keys()
 ax.set_title("Average Concentration by Year", fontsize=20)
 ax.plot(x_axis,y_axis)
-ax.legend(keysyear)
+plt.legend(keysyear)
 ax.set_xlabel("Year")
 ax.set_ylabel("Concentration of pollutant")
 st.pyplot(fig)
+plt.show()
 
 col1, col2, col3, = st.columns(3)
 
@@ -486,9 +487,10 @@ keysaqi = group_byaqi.keys()
 ax.set_title("Average AQI by Year", fontsize=20)
 ax.plot(x_axis,y_axis)
 ax.set_xlabel("Year")
-ax.legend(keysaqi)
+plt.legend(keysaqi)
 ax.set_ylabel("AQI of pollutant")
 st.pyplot(fig)
+plt.show()
 
 st.subheader("AQI categories in each cities by pollutant")
 pollutant = st.selectbox(
