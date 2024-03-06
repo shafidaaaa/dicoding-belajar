@@ -13,7 +13,6 @@ Original file is located at
 """
 import pandas as pd
 import matplotlib.pyplot as plt
-
 import seaborn as sns
 import numpy as np
 import scipy.stats as stats
@@ -359,11 +358,11 @@ def calculatePollutantYearly(chooseData, pollutant, year):
 
     return sumYearly, averageYearly,aqi, aqiCategory(aqi)
 
-st.markdown("<h1 style='text-align: center;'>Air Quality District of China</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Air Quality District of Beijing</h1>", unsafe_allow_html=True)
 st.write("<h4 style='text-align: center;'>Preliminary Risk Screen Assessments (PRSAs)</h4>", unsafe_allow_html=True)
 st.write("<h4 style='text-align: center;'>2013 - 2017</h4><br /><br /><br /><hr />", unsafe_allow_html=True)
 
-
+plt.style.use('dark_background')
 with st.sidebar:
     st.subheader("AQI in daily")
     st.text("Choose the Data")
@@ -452,8 +451,10 @@ with col3:
 fig, ax = plt.subplots(figsize=(10,8))
 x_axis = group_byyear.index
 y_axis = group_byyear.values
+keysyear = group_byyear.keys()
 ax.set_title("Average Concentration by Year", fontsize=20)
 ax.plot(x_axis,y_axis)
+ax.legend(keysyear)
 ax.set_xlabel("Year")
 ax.set_ylabel("Concentration of pollutant")
 st.pyplot(fig)
@@ -481,9 +482,11 @@ with col3:
 fig, ax = plt.subplots(figsize=(10,8))
 x_axis = group_byaqi.index
 y_axis = group_byaqi.values
+keysaqi = group_byaqi.keys()
 ax.set_title("Average AQI by Year", fontsize=20)
 ax.plot(x_axis,y_axis)
 ax.set_xlabel("Year")
+ax.legend(keysaqi)
 ax.set_ylabel("AQI of pollutant")
 st.pyplot(fig)
 
@@ -498,7 +501,7 @@ pollutant = st.selectbox(
         "O3",
 
     ])
-plt.style.use('dark_background')
+
 cityLabel = ['Aotizhongxin', 'Changping', 'Dingling', 'Dongsi', 'Guanyuan', 'Gucheng', 'Huairou', 'Nongzhanguan', 'Shunyi', 'Tiantan', 'Wanliu', 'Wanshouxigong']
 
 
