@@ -4,14 +4,13 @@
 # pandas==1.5.3
 # scipy==1.9.3
 # scipy==1.10.1
-# scikit-learn==1.2.2
 # seaborn==0.13.2
 # streamlit==1.31.1
 
 matplotlib
 numpy
+numpy
 pandas
 scipy
 seaborn
 streamlit
-scikit-learn
