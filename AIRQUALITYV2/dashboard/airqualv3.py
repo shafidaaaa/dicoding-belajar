@@ -20,6 +20,8 @@ import streamlit as st
 import datetime
 import matplotlib.cm as cm
 
+
+
 aotizhongxin_df = pd.read_csv("https://raw.githubusercontent.com/marceloreis/HTI/master/PRSA_Data_20130301-20170228/PRSA_Data_Aotizhongxin_20130301-20170228.csv")
 
 changping_df = pd.read_csv("https://raw.githubusercontent.com/marceloreis/HTI/master/PRSA_Data_20130301-20170228/PRSA_Data_Changping_20130301-20170228.csv")
@@ -453,12 +455,12 @@ x_axis = group_byyear.index
 y_axis = group_byyear.values
 keysyear = group_byyear.keys()
 ax.set_title("Average Concentration by Year", fontsize=20)
-ax.plot(x_axis,y_axis, linewidth=2)
-ax.legend(keysyear,loc ='right')
+ax.plot(x_axis,y_axis)
+ax.legend(keysyear, loc ='right')
 ax.set_xlabel("Year")
 ax.set_ylabel("Concentration of pollutant")
 st.pyplot(fig)
-plt.show()
+
 
 col1, col2, col3, = st.columns(3)
 
@@ -485,12 +487,12 @@ x_axis = group_byaqi.index
 y_axis = group_byaqi.values
 keysaqi = group_byaqi.keys()
 ax.set_title("Average AQI by Year", fontsize=20)
-ax.plot(x_axis,y_axis,linewidth=2)
+ax.plot(x_axis,y_axis)
 ax.set_xlabel("Year")
-ax.legend(keysaqi,loc ='right')
+ax.legend(keysaqi, loc ='right')
 ax.set_ylabel("AQI of pollutant")
 st.pyplot(fig)
-plt.show()
+
 
 st.subheader("AQI categories in each cities by pollutant")
 pollutant = st.selectbox(
@@ -526,6 +528,7 @@ for area, df in dfs_cleaned.items():
         st.write("Error calculation AQI for", pollutant,' in ',area)
 
 avg_df = pd.DataFrame.from_dict(avg, orient='index')
+
 cmap = plt.get_cmap('PuRd')
 
 colors = {
@@ -557,7 +560,6 @@ st.markdown("<br/><h3 style='text-align: center;'>Average Pollutant Concentratio
 
 
 
-colors2 = [cmap(i) for i in range(len(pollutants))]
 
 col3, col4,col5 = st.columns(3)
 dict_col1 = {
@@ -597,13 +599,12 @@ with col3:
         fig, ax = plt.subplots(figsize=(6,6))
         pollutants = df_cleaned.index
         mean_concentrations = df_cleaned.values
-        ax.bar(pollutants, mean_concentrations, color=colors2)
+        ax.bar(pollutants, mean_concentrations, color=cmap(0.2))
         ax.set_title("In {} ".format(df['station'][0]))
         ax.set_xlabel("Pollutant")
         ax.set_ylabel("Average Concentration")
         plt.xticks(rotation=45, ha='right')
         st.pyplot(fig)
-        plt.show()
 
 
 with col4:
@@ -620,13 +621,13 @@ with col4:
         fig, ax = plt.subplots(figsize=(6,6))
         pollutants = df_cleaned.index
         mean_concentrations = df_cleaned.values
-        ax.bar(pollutants, mean_concentrations, color=colors2)
+        ax.bar(pollutants, mean_concentrations, color=cmap(0.2))
         ax.set_title("In {} ".format(df['station'][0]))
         ax.set_xlabel("Pollutant")
         ax.set_ylabel("Average Concentration")
         plt.xticks(rotation=45, ha='right')
         st.pyplot(fig)
-        plt.show()
+
 
 
 with col5:
@@ -643,14 +644,12 @@ with col5:
         fig, ax = plt.subplots(figsize=(6,6))
         pollutants = df_cleaned.index
         mean_concentrations = df_cleaned.values
-        ax.bar(pollutants, mean_concentrations, color=colors2)
+        ax.bar(pollutants, mean_concentrations, color=cmap(0.2))
         ax.set_title("In {} ".format(df['station'][0]))
         ax.set_xlabel("Pollutant")
         ax.set_ylabel("Average Concentration")
         plt.xticks(rotation=45, ha='right')
         st.pyplot(fig)
-        plt.show()
-
 
 
 
