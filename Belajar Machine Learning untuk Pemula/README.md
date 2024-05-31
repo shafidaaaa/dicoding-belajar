@@ -1,21 +1,22 @@
-This is a classification of rock, paper and scissors using basic CNN and transfer learning
+This is a classification of rock, paper and scissors using basic CNN and transfer learning<br>
 
-here are the requirements
+here are the requirements<br>
 ---
 
-ipykernel==6.29.4
-ipython==8.24.0
-keras==3.3.3
-matplotlib==3.9.0
-matplotlib-inline==0.1.7
-numpy==1.26.4
-opencv-python==4.9.0.80
-pandas==2.2.2
-pillow==10.3.0
-requests==2.32.3
-scikit-learn==1.5.0
-scipy==1.13.1
-seaborn==0.13.2
-tensorflow==2.16.1
+ipykernel==6.29.4<br>
+ipython==8.24.0<br>
+keras==3.3.3<br>
+matplotlib==3.9.0<br>
+matplotlib-inline==0.1.7<br>
+numpy==1.26.4<br>
+opencv-python==4.9.0.80<br>
+pandas==2.2.2<br>
+pillow==10.3.0<br>
+requests==2.32.3<br>
+scikit-learn==1.5.0<br>
+scipy==1.13.1<br>
+seaborn==0.13.2<br>
+tensorflow==2.16.1<br>
+
 
 ---
