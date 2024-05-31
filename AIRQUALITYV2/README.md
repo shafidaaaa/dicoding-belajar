@@ -1,4 +1,4 @@
-# Shafida Dashboard Air Quality using Streamlit
+# Dashboard Air Quality using Streamlit
 
 ## Here is the link to the streamlit deployment
 ```
