@@ -20,3 +20,6 @@ tensorflow==2.16.1<br>
 
 
 ---
+
+*the data is from this link*
+*https://github.com/dicodingacademy/assets/releases/download/release/rockpaperscissors.zip*
