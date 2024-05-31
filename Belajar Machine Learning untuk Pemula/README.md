@@ -1,4 +1,6 @@
 This is a classification of rock, paper and scissors using basic CNN and transfer learning<br>
+<br>
+This is project is the final task of Dicoding's course called "Belajar Machine Learning untuk Pemula"<br>
 
 here are the requirements<br>
 ---
